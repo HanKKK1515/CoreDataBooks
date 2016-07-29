@@ -7,6 +7,7 @@
 //
 
 #import "HLBook.h"
+#import "HLAuthor.h"
 
 @implementation HLBook
 

@@ -13,8 +13,9 @@
 
 @implementation HLAuthor (CoreDataProperties)
 
-@dynamic name;
 @dynamic authorDesc;
+@dynamic name;
+@dynamic date;
 @dynamic books;
 
 @end

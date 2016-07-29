@@ -15,8 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HLAuthor (CoreDataProperties)
 
-@property (nullable, nonatomic, retain) NSString *name;
 @property (nullable, nonatomic, retain) NSString *authorDesc;
+@property (nullable, nonatomic, retain) NSString *name;
+@property (nullable, nonatomic, retain) NSDate *date;
 @property (nullable, nonatomic, retain) NSSet<HLBook *> *books;
 
 @end

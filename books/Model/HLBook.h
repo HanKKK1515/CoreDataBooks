@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+@class HLAuthor;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HLBook : NSManagedObject

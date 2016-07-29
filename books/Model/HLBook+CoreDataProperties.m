@@ -15,6 +15,7 @@
 
 @dynamic name;
 @dynamic publishHouse;
+@dynamic date;
 @dynamic author;
 
 @end

@@ -17,7 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nullable, nonatomic, retain) NSString *name;
 @property (nullable, nonatomic, retain) NSString *publishHouse;
-@property (nullable, nonatomic, retain) NSManagedObject *author;
+@property (nullable, nonatomic, retain) NSDate *date;
+@property (nullable, nonatomic, retain) HLAuthor *author;
 
 @end
 

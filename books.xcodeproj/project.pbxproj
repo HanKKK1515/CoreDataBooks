@@ -8,38 +8,52 @@
 
 /* Begin PBXBuildFile section */
 		E452E2D81D4AE36A0057EEC9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E452E2D71D4AE36A0057EEC9 /* main.m */; };
-		E452E2DB1D4AE36A0057EEC9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E452E2DA1D4AE36A0057EEC9 /* AppDelegate.m */; };
-		E452E2DE1D4AE36A0057EEC9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E452E2DD1D4AE36A0057EEC9 /* ViewController.m */; };
 		E452E2E11D4AE36A0057EEC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E452E2DF1D4AE36A0057EEC9 /* Main.storyboard */; };
 		E452E2E41D4AE36A0057EEC9 /* books.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E452E2E21D4AE36A0057EEC9 /* books.xcdatamodeld */; };
 		E452E2E61D4AE36A0057EEC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E452E2E51D4AE36A0057EEC9 /* Assets.xcassets */; };
 		E452E2E91D4AE36A0057EEC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E452E2E71D4AE36A0057EEC9 /* LaunchScreen.storyboard */; };
-		E452E2F81D4B1D9E0057EEC9 /* HLBook+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E452E2F11D4B1D9E0057EEC9 /* HLBook+CoreDataProperties.m */; };
-		E452E2F91D4B1D9E0057EEC9 /* HLBook.m in Sources */ = {isa = PBXBuildFile; fileRef = E452E2F31D4B1D9E0057EEC9 /* HLBook.m */; };
-		E452E2FA1D4B1D9E0057EEC9 /* HLAuthor+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E452E2F51D4B1D9E0057EEC9 /* HLAuthor+CoreDataProperties.m */; };
-		E452E2FB1D4B1D9E0057EEC9 /* HLAuthor.m in Sources */ = {isa = PBXBuildFile; fileRef = E452E2F71D4B1D9E0057EEC9 /* HLAuthor.m */; };
+		E452E3151D4B2C750057EEC9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E452E3141D4B2C750057EEC9 /* AppDelegate.m */; };
+		E452E3181D4B30050057EEC9 /* HLAuthorListController.m in Sources */ = {isa = PBXBuildFile; fileRef = E452E3171D4B30050057EEC9 /* HLAuthorListController.m */; };
+		E452E31B1D4B303B0057EEC9 /* HLAddAuthorController.m in Sources */ = {isa = PBXBuildFile; fileRef = E452E31A1D4B303B0057EEC9 /* HLAddAuthorController.m */; };
+		E452E31E1D4B305D0057EEC9 /* HLBookListController.m in Sources */ = {isa = PBXBuildFile; fileRef = E452E31D1D4B305D0057EEC9 /* HLBookListController.m */; };
+		E452E3211D4B307A0057EEC9 /* HLAddBookController.m in Sources */ = {isa = PBXBuildFile; fileRef = E452E3201D4B307A0057EEC9 /* HLAddBookController.m */; };
+		E452E3251D4B72000057EEC9 /* HLSortView.m in Sources */ = {isa = PBXBuildFile; fileRef = E452E3241D4B72000057EEC9 /* HLSortView.m */; };
+		E452E3271D4B721C0057EEC9 /* HLSortView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E452E3261D4B721C0057EEC9 /* HLSortView.xib */; };
+		E452E3301D4BA10D0057EEC9 /* HLBook+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E452E3291D4BA10D0057EEC9 /* HLBook+CoreDataProperties.m */; };
+		E452E3311D4BA10D0057EEC9 /* HLBook.m in Sources */ = {isa = PBXBuildFile; fileRef = E452E32B1D4BA10D0057EEC9 /* HLBook.m */; };
+		E452E3321D4BA10D0057EEC9 /* HLAuthor+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E452E32D1D4BA10D0057EEC9 /* HLAuthor+CoreDataProperties.m */; };
+		E452E3331D4BA10D0057EEC9 /* HLAuthor.m in Sources */ = {isa = PBXBuildFile; fileRef = E452E32F1D4BA10D0057EEC9 /* HLAuthor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E452E2D31D4AE36A0057EEC9 /* books.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = books.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E452E2D71D4AE36A0057EEC9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E452E2D91D4AE36A0057EEC9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		E452E2DA1D4AE36A0057EEC9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E452E2DC1D4AE36A0057EEC9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E452E2DD1D4AE36A0057EEC9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E452E2E01D4AE36A0057EEC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E452E2E31D4AE36A0057EEC9 /* books.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = books.xcdatamodel; sourceTree = "<group>"; };
 		E452E2E51D4AE36A0057EEC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E452E2E81D4AE36A0057EEC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E452E2EA1D4AE36A0057EEC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E452E2F01D4B1D9E0057EEC9 /* HLBook+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HLBook+CoreDataProperties.h"; sourceTree = "<group>"; };
-		E452E2F11D4B1D9E0057EEC9 /* HLBook+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HLBook+CoreDataProperties.m"; sourceTree = "<group>"; };
-		E452E2F21D4B1D9E0057EEC9 /* HLBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLBook.h; sourceTree = "<group>"; };
-		E452E2F31D4B1D9E0057EEC9 /* HLBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLBook.m; sourceTree = "<group>"; };
-		E452E2F41D4B1D9E0057EEC9 /* HLAuthor+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HLAuthor+CoreDataProperties.h"; sourceTree = "<group>"; };
-		E452E2F51D4B1D9E0057EEC9 /* HLAuthor+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HLAuthor+CoreDataProperties.m"; sourceTree = "<group>"; };
-		E452E2F61D4B1D9E0057EEC9 /* HLAuthor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLAuthor.h; sourceTree = "<group>"; };
-		E452E2F71D4B1D9E0057EEC9 /* HLAuthor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLAuthor.m; sourceTree = "<group>"; };
+		E452E3131D4B2C750057EEC9 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E452E3141D4B2C750057EEC9 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E452E3161D4B30050057EEC9 /* HLAuthorListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLAuthorListController.h; sourceTree = "<group>"; };
+		E452E3171D4B30050057EEC9 /* HLAuthorListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLAuthorListController.m; sourceTree = "<group>"; };
+		E452E3191D4B303B0057EEC9 /* HLAddAuthorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLAddAuthorController.h; sourceTree = "<group>"; };
+		E452E31A1D4B303B0057EEC9 /* HLAddAuthorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLAddAuthorController.m; sourceTree = "<group>"; };
+		E452E31C1D4B305D0057EEC9 /* HLBookListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLBookListController.h; sourceTree = "<group>"; };
+		E452E31D1D4B305D0057EEC9 /* HLBookListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLBookListController.m; sourceTree = "<group>"; };
+		E452E31F1D4B307A0057EEC9 /* HLAddBookController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLAddBookController.h; sourceTree = "<group>"; };
+		E452E3201D4B307A0057EEC9 /* HLAddBookController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLAddBookController.m; sourceTree = "<group>"; };
+		E452E3231D4B72000057EEC9 /* HLSortView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLSortView.h; sourceTree = "<group>"; };
+		E452E3241D4B72000057EEC9 /* HLSortView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLSortView.m; sourceTree = "<group>"; };
+		E452E3261D4B721C0057EEC9 /* HLSortView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HLSortView.xib; sourceTree = "<group>"; };
+		E452E3281D4BA10D0057EEC9 /* HLBook+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HLBook+CoreDataProperties.h"; sourceTree = "<group>"; };
+		E452E3291D4BA10D0057EEC9 /* HLBook+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HLBook+CoreDataProperties.m"; sourceTree = "<group>"; };
+		E452E32A1D4BA10D0057EEC9 /* HLBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLBook.h; sourceTree = "<group>"; };
+		E452E32B1D4BA10D0057EEC9 /* HLBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLBook.m; sourceTree = "<group>"; };
+		E452E32C1D4BA10D0057EEC9 /* HLAuthor+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HLAuthor+CoreDataProperties.h"; sourceTree = "<group>"; };
+		E452E32D1D4BA10D0057EEC9 /* HLAuthor+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HLAuthor+CoreDataProperties.m"; sourceTree = "<group>"; };
+		E452E32E1D4BA10D0057EEC9 /* HLAuthor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLAuthor.h; sourceTree = "<group>"; };
+		E452E32F1D4BA10D0057EEC9 /* HLAuthor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLAuthor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,24 +86,16 @@
 		E452E2D51D4AE36A0057EEC9 /* books */ = {
 			isa = PBXGroup;
 			children = (
-				E452E2D91D4AE36A0057EEC9 /* AppDelegate.h */,
-				E452E2DA1D4AE36A0057EEC9 /* AppDelegate.m */,
-				E452E2DC1D4AE36A0057EEC9 /* ViewController.h */,
-				E452E2DD1D4AE36A0057EEC9 /* ViewController.m */,
+				E452E3221D4B71A40057EEC9 /* View */,
+				E452E3121D4B2C750057EEC9 /* Other */,
+				E452E30E1D4B2C5E0057EEC9 /* Controller */,
+				E452E3001D4B2C4B0057EEC9 /* Model */,
 				E452E2DF1D4AE36A0057EEC9 /* Main.storyboard */,
 				E452E2E51D4AE36A0057EEC9 /* Assets.xcassets */,
 				E452E2E71D4AE36A0057EEC9 /* LaunchScreen.storyboard */,
 				E452E2EA1D4AE36A0057EEC9 /* Info.plist */,
 				E452E2E21D4AE36A0057EEC9 /* books.xcdatamodeld */,
 				E452E2D61D4AE36A0057EEC9 /* Supporting Files */,
-				E452E2F01D4B1D9E0057EEC9 /* HLBook+CoreDataProperties.h */,
-				E452E2F11D4B1D9E0057EEC9 /* HLBook+CoreDataProperties.m */,
-				E452E2F21D4B1D9E0057EEC9 /* HLBook.h */,
-				E452E2F31D4B1D9E0057EEC9 /* HLBook.m */,
-				E452E2F41D4B1D9E0057EEC9 /* HLAuthor+CoreDataProperties.h */,
-				E452E2F51D4B1D9E0057EEC9 /* HLAuthor+CoreDataProperties.m */,
-				E452E2F61D4B1D9E0057EEC9 /* HLAuthor.h */,
-				E452E2F71D4B1D9E0057EEC9 /* HLAuthor.m */,
 			);
 			path = books;
 			sourceTree = "<group>";
@@ -100,6 +106,56 @@
 				E452E2D71D4AE36A0057EEC9 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E452E3001D4B2C4B0057EEC9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E452E3281D4BA10D0057EEC9 /* HLBook+CoreDataProperties.h */,
+				E452E3291D4BA10D0057EEC9 /* HLBook+CoreDataProperties.m */,
+				E452E32A1D4BA10D0057EEC9 /* HLBook.h */,
+				E452E32B1D4BA10D0057EEC9 /* HLBook.m */,
+				E452E32C1D4BA10D0057EEC9 /* HLAuthor+CoreDataProperties.h */,
+				E452E32D1D4BA10D0057EEC9 /* HLAuthor+CoreDataProperties.m */,
+				E452E32E1D4BA10D0057EEC9 /* HLAuthor.h */,
+				E452E32F1D4BA10D0057EEC9 /* HLAuthor.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E452E30E1D4B2C5E0057EEC9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E452E3161D4B30050057EEC9 /* HLAuthorListController.h */,
+				E452E3171D4B30050057EEC9 /* HLAuthorListController.m */,
+				E452E3191D4B303B0057EEC9 /* HLAddAuthorController.h */,
+				E452E31A1D4B303B0057EEC9 /* HLAddAuthorController.m */,
+				E452E31C1D4B305D0057EEC9 /* HLBookListController.h */,
+				E452E31D1D4B305D0057EEC9 /* HLBookListController.m */,
+				E452E31F1D4B307A0057EEC9 /* HLAddBookController.h */,
+				E452E3201D4B307A0057EEC9 /* HLAddBookController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E452E3121D4B2C750057EEC9 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				E452E3131D4B2C750057EEC9 /* AppDelegate.h */,
+				E452E3141D4B2C750057EEC9 /* AppDelegate.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		E452E3221D4B71A40057EEC9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E452E3231D4B72000057EEC9 /* HLSortView.h */,
+				E452E3241D4B72000057EEC9 /* HLSortView.m */,
+				E452E3261D4B721C0057EEC9 /* HLSortView.xib */,
+			);
+			name = View;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +217,7 @@
 			files = (
 				E452E2E91D4AE36A0057EEC9 /* LaunchScreen.storyboard in Resources */,
 				E452E2E61D4AE36A0057EEC9 /* Assets.xcassets in Resources */,
+				E452E3271D4B721C0057EEC9 /* HLSortView.xib in Resources */,
 				E452E2E11D4AE36A0057EEC9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -172,13 +229,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E452E2F91D4B1D9E0057EEC9 /* HLBook.m in Sources */,
-				E452E2F81D4B1D9E0057EEC9 /* HLBook+CoreDataProperties.m in Sources */,
+				E452E3331D4BA10D0057EEC9 /* HLAuthor.m in Sources */,
+				E452E3321D4BA10D0057EEC9 /* HLAuthor+CoreDataProperties.m in Sources */,
+				E452E31B1D4B303B0057EEC9 /* HLAddAuthorController.m in Sources */,
+				E452E3251D4B72000057EEC9 /* HLSortView.m in Sources */,
+				E452E3181D4B30050057EEC9 /* HLAuthorListController.m in Sources */,
+				E452E3301D4BA10D0057EEC9 /* HLBook+CoreDataProperties.m in Sources */,
+				E452E3151D4B2C750057EEC9 /* AppDelegate.m in Sources */,
+				E452E31E1D4B305D0057EEC9 /* HLBookListController.m in Sources */,
+				E452E3211D4B307A0057EEC9 /* HLAddBookController.m in Sources */,
 				E452E2E41D4AE36A0057EEC9 /* books.xcdatamodeld in Sources */,
-				E452E2DE1D4AE36A0057EEC9 /* ViewController.m in Sources */,
-				E452E2FB1D4B1D9E0057EEC9 /* HLAuthor.m in Sources */,
-				E452E2DB1D4AE36A0057EEC9 /* AppDelegate.m in Sources */,
-				E452E2FA1D4B1D9E0057EEC9 /* HLAuthor+CoreDataProperties.m in Sources */,
+				E452E3311D4BA10D0057EEC9 /* HLBook.m in Sources */,
 				E452E2D81D4AE36A0057EEC9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,6 +391,7 @@
 				E452E2EF1D4AE36A0057EEC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

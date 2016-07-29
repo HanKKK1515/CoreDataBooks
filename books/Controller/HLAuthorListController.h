@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  HLAuthorListController.h
 //  books
 //
 //  Created by 韩露露 on 16/7/29.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface HLAuthorListController : UITableViewController
 
 @end
-
