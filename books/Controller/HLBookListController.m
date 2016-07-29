@@ -33,7 +33,7 @@
     [super viewDidLoad];
     self.title = [NSString stringWithFormat:@"%@的图书。", self.author.name];
     self.appDelegate = [UIApplication sharedApplication].delegate;
-    self.sortKey = @"date";
+    self.sortKey = @"date"; // 默认以时间排序
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -62,6 +62,7 @@
     }
 }
 
+#pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.booksList.count;
 }
@@ -73,6 +74,34 @@
     cell.textLabel.text = book.name;
     cell.detailTextLabel.text = book.publishHouse;
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        HLBook *book = self.booksList[indexPath.row];
+        [self.appDelegate.managedObjectContext deleteObject:book];
+        NSError *error = nil;
+        if ([self.appDelegate.managedObjectContext save:&error]) {
+            [self.booksList removeObject:book];
+            [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        }
+    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        
+    }
+}
+
+#pragma mark - UIScrollViewDelegate
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    if (self.isShowSort) {
+        [self.sortView removeFromSuperview];
+        self.showSort = NO;
+    }
+}
+
+#pragma mark - 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    HLAddBookController *addBookVc = segue.destinationViewController;
+    addBookVc.author = self.author;
 }
 
 - (IBAction)toggoleDelete:(UIBarButtonItem *)sender {
@@ -90,9 +119,11 @@
 
 - (IBAction)sort:(UIBarButtonItem *)sender {
     if (self.isShowSort) {
+        // 从主window中移除排序选项的View。
         [self.sortView removeFromSuperview];
         self.showSort = NO;
     } else {
+        // 排序选项的View添加到主window中，添加约束。
         UIView *window = [UIApplication sharedApplication].keyWindow;
         self.sortView = [HLSortView sortView];
         [window insertSubview:self.sortView atIndex:1];
@@ -105,6 +136,7 @@
     }
 }
 
+#pragma mark - HLSortView的代理方法
 - (void)sortView:(HLSortView *)sortView sortType:(HLSortType)sortType {
     switch(sortType) {
         case kHLSortTypeNameAscending:
@@ -125,32 +157,6 @@
             break;
     }
     [self viewWillAppear:YES];
-}
-
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        HLBook *book = self.booksList[indexPath.row];
-        [self.appDelegate.managedObjectContext deleteObject:book];
-        NSError *error = nil;
-        if ([self.appDelegate.managedObjectContext save:&error]) {
-            [self.booksList removeObject:book];
-            [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-        }
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        
-    }
-}
-
-- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-    if (self.isShowSort) {
-        [self.sortView removeFromSuperview];
-        self.showSort = NO;
-    }
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    HLAddBookController *addBookVc = segue.destinationViewController;
-    addBookVc.author = self.author;
 }
 
 @end

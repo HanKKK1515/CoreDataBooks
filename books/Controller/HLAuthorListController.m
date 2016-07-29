@@ -31,7 +31,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.appDelegate = [UIApplication sharedApplication].delegate;
-    self.sortKey = @"date";
+    self.sortKey = @"date"; // 默认以时间排序
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -58,7 +58,6 @@
 }
 
 #pragma mark - Table view data source
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.authors.count;
 }
@@ -70,58 +69,6 @@
     cell.textLabel.text = author.name;
     cell.detailTextLabel.text = author.authorDesc;
     return cell;
-}
-
-- (IBAction)toggoleDelete:(UIBarButtonItem *)sender {
-    if (self.isShowSort) {
-        [self.sortView removeFromSuperview];
-        self.showSort = NO;
-    }
-    if (self.authors.count) {
-        [self.tableView setEditing:!self.tableView.isEditing animated:YES];
-    } else {
-        self.tableView.editing = NO;
-    }
-    sender.title = self.tableView.isEditing ? @"完成" : @"删除";
-}
-
-- (IBAction)sort:(UIBarButtonItem *)sender {
-    if (self.isShowSort) {
-        [self.sortView removeFromSuperview];
-        self.showSort = NO;
-    } else {
-        UIView *window = [UIApplication sharedApplication].keyWindow;
-        self.sortView = [HLSortView sortView];
-        [window insertSubview:self.sortView atIndex:1];
-        self.sortView.delegate = self;
-        self.sortView.translatesAutoresizingMaskIntoConstraints = NO;
-        NSLayoutConstraint *consTop = [NSLayoutConstraint constraintWithItem:self.sortView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:window attribute:NSLayoutAttributeTop multiplier:1 constant:60];
-        NSLayoutConstraint *consRight = [NSLayoutConstraint constraintWithItem:self.sortView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:window attribute:NSLayoutAttributeRight multiplier:1 constant:-35];
-        [window addConstraints:@[consTop, consRight]];
-        self.showSort = YES;
-    }
-}
-
-- (void)sortView:(HLSortView *)sortView sortType:(HLSortType)sortType {
-    switch(sortType) {
-        case kHLSortTypeNameAscending:
-            self.sortKey = @"name";
-            self.ascending = YES;
-            break;
-        case kHLSortTypeNameDescending:
-            self.sortKey = @"name";
-            self.ascending = NO;
-            break;
-        case kHLSortTypeDateAscending:
-            self.sortKey = @"date";
-            self.ascending = YES;
-            break;
-        case kHLSortTypeDateDescending:
-            self.sortKey = @"date";
-            self.ascending = NO;
-            break;
-    }
-    [self viewWillAppear:YES];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -142,6 +89,7 @@
     }
 }
 
+#pragma mark - UIScrollViewDelegate
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
     if (self.isShowSort) {
         [self.sortView removeFromSuperview];
@@ -149,12 +97,68 @@
     }
 }
 
+#pragma mark - 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"bookSegue"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
         HLBookListController *bookVc = segue.destinationViewController;
         bookVc.author = self.authors[indexPath.row];
     }
+}
+
+- (IBAction)toggoleDelete:(UIBarButtonItem *)sender {
+    if (self.isShowSort) {
+        [self.sortView removeFromSuperview];
+        self.showSort = NO;
+    }
+    if (self.authors.count) {
+        [self.tableView setEditing:!self.tableView.isEditing animated:YES];
+    } else {
+        self.tableView.editing = NO;
+    }
+    sender.title = self.tableView.isEditing ? @"完成" : @"删除";
+}
+
+- (IBAction)sort:(UIBarButtonItem *)sender {
+    if (self.isShowSort) {
+        // 从主window中移除排序选项的View。
+        [self.sortView removeFromSuperview];
+        self.showSort = NO;
+    } else {
+        // 排序选项的View添加到主window中，添加约束。
+        UIView *window = [UIApplication sharedApplication].keyWindow;
+        self.sortView = [HLSortView sortView];
+        [window insertSubview:self.sortView atIndex:1];
+        self.sortView.delegate = self;
+        self.sortView.translatesAutoresizingMaskIntoConstraints = NO;
+        NSLayoutConstraint *consTop = [NSLayoutConstraint constraintWithItem:self.sortView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:window attribute:NSLayoutAttributeTop multiplier:1 constant:60];
+        NSLayoutConstraint *consRight = [NSLayoutConstraint constraintWithItem:self.sortView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:window attribute:NSLayoutAttributeRight multiplier:1 constant:-35];
+        [window addConstraints:@[consTop, consRight]];
+        self.showSort = YES;
+    }
+}
+
+#pragma mark - HLSortView的代理方法
+- (void)sortView:(HLSortView *)sortView sortType:(HLSortType)sortType {
+    switch(sortType) {
+        case kHLSortTypeNameAscending:
+            self.sortKey = @"name";
+            self.ascending = YES;
+            break;
+        case kHLSortTypeNameDescending:
+            self.sortKey = @"name";
+            self.ascending = NO;
+            break;
+        case kHLSortTypeDateAscending:
+            self.sortKey = @"date";
+            self.ascending = YES;
+            break;
+        case kHLSortTypeDateDescending:
+            self.sortKey = @"date";
+            self.ascending = NO;
+            break;
+    }
+    [self viewWillAppear:YES];
 }
 
 @end
